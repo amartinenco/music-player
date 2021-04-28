@@ -1,0 +1,132 @@
+:root {
+    
+    /* --background-color: #5B8EF3; */
+    --background-color: #D49A6A;
+    --player-color: #FFD1AA;
+    /* --player-color: #5B8EF3; */
+    --progress-bar-background: #FFF;
+    /* --progress-bar-progress: #242323; */
+    --progress-bar-progress: #3574F1;
+    --control-buttons-color: #000;
+    --control-buttons-color-hover: rgb(65, 65, 65);
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    /* 1 rem = 10px; 10px/16px = 62.5% */
+    font-size: 62.5%; 
+    /* font-size: 56.25%; //1 rem = 9px, 9/16 = 50% (tablet landscape width < 1200) */
+    /* font-size: 50%; //1 rem = 8px, 8/16 = 50%(tablet port width < 900)*/
+    /* font-size: 75%; // 1rem = 12, 12/16 = 75% (big desktops)*/
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    min-height: 100vh;
+    background: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player-container {
+    height: 60rem;
+    width: 50rem;
+    border-radius: 1rem;
+    background-color: var(--player-color);
+    box-shadow: 0 1.5rem 3rem 1rem rgba(0, 0, 0, 0.3);
+}
+
+.img-container {
+    height: 30rem;
+    width: 30rem;
+    position: relative;
+    left: 10rem;
+    top: 1.5rem;
+    padding-bottom: 4rem;
+}
+
+.img-container img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    box-shadow: 0 5px 30px 5px rgba(0, 0, 0, 0.5);
+}
+
+.song-info-container h2 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.song-info-container h3 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.progress-container {
+    background: var(--progress-bar-background);
+    border-radius: 1rem;
+    cursor: pointer;
+    margin: 4rem auto;
+    height: 1.5rem;
+    width: 90%;
+    user-select: none;
+}
+
+.progress {
+    background: var(--progress-bar-progress);
+    border-radius: 1rem;
+    height: 100%;
+    width: 0%;
+    transition: width 0.1s linear;
+}
+
+.duration-wrapper {
+    position: relative;
+    top: -4rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+}
+
+.player-controls {
+    position: relative;
+    left: 15rem;
+    user-select: none;
+}
+
+.fas {
+    font-size: 4rem;
+    color: var(--control-buttons-color);
+    margin-right: 3rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.fas:hover {
+    color: var(--control-buttons-color-hover);
+}
+
+.main-button {
+    font-size: 6rem;
+    position: relative;
+    top: .6rem;
+}
+
+@media screen and (max-width: 376px) {
+    .player-container {
+        width: 95vw;
+    }
+
+    .img-container {
+        left: 3rem;
+    }
+}
