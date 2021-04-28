@@ -99,6 +99,7 @@ body {
 
 .player-controls {
     position: relative;
+    width: 25rem;
     left: 15rem;
     user-select: none;
 }
@@ -123,9 +124,10 @@ body {
 
 @media screen and (max-width: 600px) {
     .player-container {
+        width: 40rem;
         margin: 1rem;
     }
-    
+
     .img-container {
         left: 5rem;
     }
@@ -137,14 +139,66 @@ body {
 
 @media screen and (max-width: 376px) {
     .player-container {
-        width: 95vw;
+        width: 35rem;
+        height: 50rem;
     }
 
     .img-container {
-        left: 3rem;
+        left: 5rem;
+        height: 25rem;
+        width: 25rem; 
     }
 
     .player-controls {
+        width: 20rem;
         left: 9rem;
+    } 
+
+    .fas {
+        margin-right: 2rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .player-container {
+        width: 30rem;
+        height: 50rem;
+    }
+
+    .img-container {
+        left: 2.5rem;
+        height: 25rem;
+        width: 25rem; 
+    }
+
+    .player-controls {
+        width: 20rem;
+        left: 7rem;
+    } 
+
+    .fas {
+        margin-right: 2rem;
+    }
+}
+
+
+@media screen and (max-width: 280px) {
+    .player-container {
+        width: 25rem;
+    }
+
+    .img-container {
+        height: 20rem;
+        width: 20rem;   
+        left: 2.5rem;
+    }
+
+   .player-controls {
+        width: 20rem;
+        left: 4rem;
+    } 
+
+   .fas {
+        margin-right: 2rem;
     }
 }
